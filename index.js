@@ -5,10 +5,14 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question("What is the project tags? ", function(tags) {
+let ask = function(tags) {
     console.log(indexString.replace('@tags', tags));
     console.log(showString.replace('@tags', tags));
     rl.close();
+}
+
+rl.question("What is the project tags? ", function(value) { 
+    ask(value) 
 });
 
 
