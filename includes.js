@@ -1,7 +1,7 @@
 let indexString = `
 /**
  * @OA\Get(
- *         tags={"%"},
+ *         tags={"@tags"},
  *         path="%",
  *         summay="%",
  *         description="%",
@@ -20,7 +20,7 @@ let indexString = `
 let showString = `
 /**
  * @OA\Get(
- *         tags={"%"},
+ *         tags={"@tags"},
  *         path="%",
  *         summary="%",
  *         description="%",
@@ -41,5 +41,6 @@ let showString = `
  *         )
  * )
  */`;
+
 
  module.exports = { indexString, showString };
