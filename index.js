@@ -1,4 +1,11 @@
-const { indexString, showString } = require("./includes.js");
+const { 
+    indexString, 
+    showString,
+    storeString,
+    updateString,
+    deleteString
+} = require("./includes.js");
+
 const readline = require("readline");
 const rl = readline.createInterface({
     input: process.stdin,
@@ -13,6 +20,12 @@ let askAction = function(data) {
             console.log(indexString);
         } else if (actionValue === "show") {
             console.log(showString);
+        } else if (actionValue === "store") {
+            console.log(storeString);
+        } else if (actionValue === "update") {
+            console.log(updateString);
+        } else if (actionValue === "delete") {
+            console.log(deleteString);
         }
         rl.close();
     }); 

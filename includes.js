@@ -1,6 +1,6 @@
 let indexString = `
 /**
- * @OA\Get(
+ * @OA\\Get(
  *         tags={"@tags"},
  *         path="%",
  *         summay="%",
@@ -19,7 +19,7 @@ let indexString = `
 
 let showString = `
 /**
- * @OA\Get(
+ * @OA\\Get(
  *         tags={"@tags"},
  *         path="%",
  *         summary="%",
@@ -42,5 +42,104 @@ let showString = `
  * )
  */`;
 
+let storeString = `
+/**
+ * @OA\\Post(
+ *          tags={"%"}
+ *          path="%",
+ *          description="%",
+ *          summary="%",
+ *          security={{"passport": {}}},
+ *          @OA\RequestBody(
+ *              @OA\MediaType(
+ *                  mediaType="application/json",
+ *                  @OA\Schema(
+ *                      example={%}
+ *                  )
+ *              )
+ *          ),
+ *          @OA\Response(
+ *              response=201,
+ *              description="Success"
+ *          ),
+ *          @OA\Response(
+ *              response="default",
+ *              description="Undefined error"
+ *          )
+ * )
+ */
+`;
 
- module.exports = { indexString, showString };
+let updateString = `
+/**
+ * @OA\\Put(
+ *         tags={"%"},
+ *         path="%",
+ *         summary="%",
+ *         description="%",
+ *         security={{"passport": {}}},
+ *         @OA\Parameter(
+ *             name="%",
+ *             description="%",
+ *             required=%,
+ *             in="%",
+ *             @OA\Schema(
+ *                 type="%"
+ *             )
+ *         ),
+ *         @OA\RequestBody(
+ *              @OA\MediaType(
+ *                  mediaType="application/json",
+ *                  @OA\Schema(
+ *                      example={%}
+ *                  )
+ *              )
+ *         ),
+ *         @OA\Response(
+ *             response=200,
+ *             description="Success"
+ *         ),
+ *         @OA\Response(
+ *             response="default",
+ *             description="Unidentified error"
+ *         )
+ * )
+ */
+`;
+
+let deleteString = `
+/**
+ * @OA\\Delete(
+ *            tags={"%"},
+ *            path="%",
+ *            summary="%",
+ *            description="%",
+ *            security={{"passport": {}}},
+ *            @OA\Parameter(
+ *                name="%",
+ *                description="%",
+ *                required=%,
+ *                in="%",
+ *                @OA\Schema(
+ *                    type="%"
+ *                ),
+ *            ),
+ *            @OA\Response(
+ *                response=200,
+ *                description="Success"
+ *            ),
+ *            @OA\Response(
+ *                response="default",
+ *                description="Unidentified error"
+ *            )
+ * )
+ */
+`;
+
+module.exports = { 
+    indexString, 
+    showString, 
+    storeString,
+    updateString,
+    deleteString
+};
