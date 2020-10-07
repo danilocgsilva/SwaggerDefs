@@ -5,15 +5,18 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let ask = function(tags) {
-    console.log(indexString.replace('@tags', tags));
-    console.log(showString.replace('@tags', tags));
-    rl.close();
+let data = {};
+
+let askAction = function(data) {
+    rl.question("What is the project action? ", function(actionValue) { 
+        if (actionValue === "index") {
+            console.log(indexString);
+        } else if (actionValue === "show") {
+            console.log(showString);
+        }
+        rl.close();
+    }); 
 }
 
-rl.question("What is the project tags? ", function(value) { 
-    ask(value) 
-});
 
-
-
+askAction(data);
