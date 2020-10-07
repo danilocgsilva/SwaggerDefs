@@ -1,20 +1,4 @@
-let stringToSplit = `
-/**
- * @OA\Get(
- *         tags={"%"},
- *         path="%",
- *         summay="%",
- *         description="%",
- *         security={{"passport": {}}},
- *         @OA\Response(
- *             response=200,
- *             description="Success"
- *         ),
- *         @OA\Response(
- *             response="default",
- *             description="Unidentified error"
- *         )
- * )
- */`;
+const { indexString, showString } = require("./includes.js");
 
-console.log(stringToSplit);
+console.log(indexString);
+console.log(showString);
