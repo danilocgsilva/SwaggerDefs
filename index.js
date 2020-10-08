@@ -15,18 +15,28 @@ const rl = readline.createInterface({
 let data = {};
 
 let askAction = function(data) {
-    rl.question("What is the project action? ", function(actionValue) { 
-        if (actionValue === "index") {
-            console.log(indexString);
-        } else if (actionValue === "show") {
-            console.log(showString);
-        } else if (actionValue === "store") {
-            console.log(storeString);
-        } else if (actionValue === "update") {
-            console.log(updateString);
-        } else if (actionValue === "delete") {
-            console.log(deleteString);
+    rl.question("What is the project action? ", function(actionValue) {
+        let stringToReturn = "";
+
+        switch (actionValue) {
+            case "index":
+                stringToReturn = indexString;
+                break;
+            case "show":
+                stringToReturn = showString;
+                break;
+            case "store":
+                stringToReturn = storeString;
+                break;
+            case "update":
+                stringToReturn = updateString;
+                break;
+            case "delete":
+                stringToReturn = deleteString;
+                break;                
+                
         }
+        console.log(stringToReturn);
         rl.close();
     }); 
 }
