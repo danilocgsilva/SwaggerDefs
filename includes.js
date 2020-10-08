@@ -6,11 +6,11 @@ let indexString = `
  *         summay="%",
  *         description="%",
  *         security={{"passport": {}}},
- *         @OA\Response(
+ *         @OA\\Response(
  *             response=200,
  *             description="Success"
  *         ),
- *         @OA\Response(
+ *         @OA\\Response(
  *             response="default",
  *             description="Unidentified error"
  *         )
@@ -25,17 +25,17 @@ let showString = `
  *         summary="%",
  *         description="%",
  *         security={{"passport": {}}},
- *         @OA\Parameter(
+ *         @OA\\Parameter(
  *             name="%",
  *             description="%",
  *             required=%,
  *             in="%"
  *         ),
- *         @OA\Response(
+ *         @OA\\Response(
  *             response=200,
  *             description="Success"
  *         ),
- *         @OA\Response(
+ *         @OA\\Response(
  *             response="default",
  *             description="Unidentified error"
  *         )
@@ -50,7 +50,7 @@ let storeString = `
  *          description="%",
  *          summary="%",
  *          security={{"passport": {}}},
- *          @OA\RequestBody(
+ *          @OA\\RequestBody(
  *              @OA\MediaType(
  *                  mediaType="application/json",
  *                  @OA\Schema(
@@ -58,11 +58,11 @@ let storeString = `
  *                  )
  *              )
  *          ),
- *          @OA\Response(
+ *          @OA\\Response(
  *              response=201,
  *              description="Success"
  *          ),
- *          @OA\Response(
+ *          @OA\\Response(
  *              response="default",
  *              description="Undefined error"
  *          )
@@ -78,7 +78,7 @@ let updateString = `
  *         summary="%",
  *         description="%",
  *         security={{"passport": {}}},
- *         @OA\Parameter(
+ *         @OA\\Parameter(
  *             name="%",
  *             description="%",
  *             required=%,
@@ -87,7 +87,7 @@ let updateString = `
  *                 type="%"
  *             )
  *         ),
- *         @OA\RequestBody(
+ *         @OA\\RequestBody(
  *              @OA\MediaType(
  *                  mediaType="application/json",
  *                  @OA\Schema(
@@ -95,11 +95,11 @@ let updateString = `
  *                  )
  *              )
  *         ),
- *         @OA\Response(
+ *         @OA\\Response(
  *             response=200,
  *             description="Success"
  *         ),
- *         @OA\Response(
+ *         @OA\\Response(
  *             response="default",
  *             description="Unidentified error"
  *         )
@@ -115,7 +115,7 @@ let deleteString = `
  *            summary="%",
  *            description="%",
  *            security={{"passport": {}}},
- *            @OA\Parameter(
+ *            @OA\\Parameter(
  *                name="%",
  *                description="%",
  *                required=%,
@@ -124,11 +124,11 @@ let deleteString = `
  *                    type="%"
  *                ),
  *            ),
- *            @OA\Response(
+ *            @OA\\Response(
  *                response=200,
  *                description="Success"
  *            ),
- *            @OA\Response(
+ *            @OA\\Response(
  *                response="default",
  *                description="Unidentified error"
  *            )
