@@ -3,7 +3,7 @@ let indexString = `
  * @OA\\Get(
  *         tags={"@tags"},
  *         path="%",
- *         summay="%",
+ *         summary="%",
  *         description="%",
  *         security={{"passport": {}}},
  *         @OA\\Response(
@@ -45,15 +45,15 @@ let showString = `
 let storeString = `
 /**
  * @OA\\Post(
- *          tags={"%"}
+ *          tags={"%"},
  *          path="%",
  *          description="%",
  *          summary="%",
  *          security={{"passport": {}}},
  *          @OA\\RequestBody(
- *              @OA\MediaType(
+ *              @OA\\MediaType(
  *                  mediaType="application/json",
- *                  @OA\Schema(
+ *                  @OA\\Schema(
  *                      example={%}
  *                  )
  *              )
@@ -88,9 +88,9 @@ let updateString = `
  *             )
  *         ),
  *         @OA\\RequestBody(
- *              @OA\MediaType(
+ *              @OA\\MediaType(
  *                  mediaType="application/json",
- *                  @OA\Schema(
+ *                  @OA\\Schema(
  *                      example={%}
  *                  )
  *              )
@@ -120,7 +120,7 @@ let deleteString = `
  *                description="%",
  *                required=%,
  *                in="%",
- *                @OA\Schema(
+ *                @OA\\Schema(
  *                    type="%"
  *                ),
  *            ),
