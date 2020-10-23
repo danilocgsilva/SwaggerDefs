@@ -3,8 +3,8 @@ let indexString = `
  * @OA\\Get(
  *         tags={"@tags"},
  *         path="%",
- *         summary="%",
- *         description="%",
+ *         summary="@summary-description",
+ *         description="@summary-description",
  *         security={{"passport": {}}},
  *         @OA\\Response(
  *             response=200,
@@ -22,8 +22,8 @@ let showString = `
  * @OA\\Get(
  *         tags={"@tags"},
  *         path="%",
- *         summary="%",
- *         description="%",
+ *         summary="@summary-description",
+ *         description="@summary-description",
  *         security={{"passport": {}}},
  *         @OA\\Parameter(
  *             name="%",
@@ -47,8 +47,8 @@ let storeString = `
  * @OA\\Post(
  *          tags={"%"},
  *          path="%",
- *          description="%",
- *          summary="%",
+ *          description="@summary-description",
+ *          summary="@summary-description",
  *          security={{"passport": {}}},
  *          @OA\\RequestBody(
  *              @OA\\MediaType(
@@ -75,8 +75,8 @@ let updateString = `
  * @OA\\Put(
  *         tags={"%"},
  *         path="%",
- *         summary="%",
- *         description="%",
+ *         summary="@summary-description",
+ *         description="@summary-description",
  *         security={{"passport": {}}},
  *         @OA\\Parameter(
  *             name="%",
@@ -112,8 +112,8 @@ let deleteString = `
  * @OA\\Delete(
  *            tags={"%"},
  *            path="%",
- *            summary="%",
- *            description="%",
+ *            summary="@summary-description",
+ *            description="@summary-description",
  *            security={{"passport": {}}},
  *            @OA\\Parameter(
  *                name="%",

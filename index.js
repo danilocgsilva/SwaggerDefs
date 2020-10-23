@@ -14,6 +14,21 @@ const rl = readline.createInterface({
 
 let data = {};
 
+let askTag = function(string_to_forge) {
+    rl.question("Type here the swagger human-readable definition: ", function(humanReadableDefinition) {
+        let forged_string = string_to_forge.replace('@tags', humanReadableDefinition);
+        askSummaryDescription(forged_string);
+    })
+};
+
+let askSummaryDescription = function(string_to_forge) {
+    rl.question("Type here the summary and description for definition: ", function(descriptionSummary) {
+        let forged_string = string_to_forge.replace(/@summary-description/g, descriptionSummary)
+        console.log(forged_string);
+        rl.close();
+    })
+}
+
 let askAction = function(data) {
     rl.question("What is the project action? ", function(actionValue) {
         let stringToReturn = "";
@@ -36,8 +51,7 @@ let askAction = function(data) {
                 break;                
                 
         }
-        console.log(stringToReturn);
-        rl.close();
+        askTag(stringToReturn);
     }); 
 }
 
