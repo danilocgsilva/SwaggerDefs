@@ -26,10 +26,10 @@ let showString = `
  *         description="@summary-description",
  *         security={{"passport": {}}},
  *         @OA\\Parameter(
- *             name="%",
- *             description="%",
- *             required=%,
- *             in="%"
+ *             name="id",
+ *             description="Id",
+ *             required=true,
+ *             in="path"
  *         ),
  *         @OA\\Response(
  *             response=200,
@@ -79,12 +79,12 @@ let updateString = `
  *         description="@summary-description",
  *         security={{"passport": {}}},
  *         @OA\\Parameter(
- *             name="%",
- *             description="%",
- *             required=%,
- *             in="%",
+ *             name="id",
+ *             description="Id",
+ *             required=true,
+ *             in="path",
  *             @OA\\Schema(
- *                 type="%"
+ *                 type="integer"
  *             )
  *         ),
  *         @OA\\RequestBody(
@@ -116,12 +116,12 @@ let deleteString = `
  *            description="@summary-description",
  *            security={{"passport": {}}},
  *            @OA\\Parameter(
- *                name="%",
- *                description="%",
- *                required=%,
- *                in="%",
+ *                name="id",
+ *                description="Id",
+ *                required=true,
+ *                in="path",
  *                @OA\\Schema(
- *                    type="%"
+ *                    type="integer"
  *                ),
  *            ),
  *            @OA\\Response(
