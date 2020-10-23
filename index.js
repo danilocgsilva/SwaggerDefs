@@ -22,7 +22,7 @@ let askTag = function(string_to_forge) {
 };
 
 let askSummaryDescription = function(string_to_forge) {
-    rl.question("Type here the summary and description for definition: ", function(descriptionSummary) {
+    rl.question("Type here the summary and description for the action: ", function(descriptionSummary) {
         let forged_string = string_to_forge.replace(/@summary-description/g, descriptionSummary)
         console.log(forged_string);
         rl.close();

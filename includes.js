@@ -21,7 +21,7 @@ let showString = `
 /**
  * @OA\\Get(
  *         tags={"@tags"},
- *         path="%",
+ *         path="%{id}",
  *         summary="@summary-description",
  *         description="@summary-description",
  *         security={{"passport": {}}},
@@ -45,7 +45,7 @@ let showString = `
 let storeString = `
 /**
  * @OA\\Post(
- *          tags={"%"},
+ *          tags={"@tags"},
  *          path="%",
  *          description="@summary-description",
  *          summary="@summary-description",
@@ -73,7 +73,7 @@ let storeString = `
 let updateString = `
 /**
  * @OA\\Put(
- *         tags={"%"},
+ *         tags={"@tags"},
  *         path="%",
  *         summary="@summary-description",
  *         description="@summary-description",
@@ -83,7 +83,7 @@ let updateString = `
  *             description="%",
  *             required=%,
  *             in="%",
- *             @OA\Schema(
+ *             @OA\\Schema(
  *                 type="%"
  *             )
  *         ),
@@ -110,7 +110,7 @@ let updateString = `
 let deleteString = `
 /**
  * @OA\\Delete(
- *            tags={"%"},
+ *            tags={"@tags"},
  *            path="%",
  *            summary="@summary-description",
  *            description="@summary-description",
