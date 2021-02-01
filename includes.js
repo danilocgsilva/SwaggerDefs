@@ -2,7 +2,7 @@ let indexString = `
 /**
  * @OA\\Get(
  *         tags={"@tags"},
- *         path="%",
+ *         path="@apiPath",
  *         summary="@summary-description",
  *         description="@summary-description",
  *         security={{"passport": {}}},
@@ -21,7 +21,7 @@ let showString = `
 /**
  * @OA\\Get(
  *         tags={"@tags"},
- *         path="%{id}",
+ *         path="@apiPath/{id}",
  *         summary="@summary-description",
  *         description="@summary-description",
  *         security={{"passport": {}}},
@@ -46,7 +46,7 @@ let storeString = `
 /**
  * @OA\\Post(
  *          tags={"@tags"},
- *          path="%",
+ *          path="@apiPath",
  *          description="@summary-description",
  *          summary="@summary-description",
  *          security={{"passport": {}}},
@@ -74,7 +74,7 @@ let updateString = `
 /**
  * @OA\\Put(
  *         tags={"@tags"},
- *         path="%",
+ *         path="@apiPath",
  *         summary="@summary-description",
  *         description="@summary-description",
  *         security={{"passport": {}}},
@@ -111,7 +111,7 @@ let deleteString = `
 /**
  * @OA\\Delete(
  *            tags={"@tags"},
- *            path="%",
+ *            path="@apiPath",
  *            summary="@summary-description",
  *            description="@summary-description",
  *            security={{"passport": {}}},
